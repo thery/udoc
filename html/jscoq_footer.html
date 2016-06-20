@@ -14,7 +14,11 @@
                   CodeMirror.colorize(coqInline); })
               .then( function () {
                   coq = new CoqManager (coqdoc_ids,
-                                       { base_path: './jscoq/', init_pkgs: ['init'] }
+                                       { base_path: './jscoq/',
+                                         init_pkgs: ['init', 'sf'],
+                                         all_pkgs:  ['init', 'coq-base', 'coq-arith', 'coq-reals',
+                                                     'sf']
+                                       }
                   );
               });
   </script>
